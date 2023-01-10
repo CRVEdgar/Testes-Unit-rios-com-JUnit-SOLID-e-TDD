@@ -310,6 +310,7 @@ public class EmprestimoServiceTest {
     @DisplayName("Testa uma devolução 30 dias após a data prevista")
     public void devolucao_30_DiaApos() throws ServiceException {
         System.out.println("START TEST IN" + LocalDateTime.now());
+        System.out.println("ADD NEW COMMENT IN 18H24");
         /**CENÁRIO*/
         Usuario userMock = gerarUser("Marcio", "2010SI201457");
         Emprestimo emprestimoMock = gerarEmprestimo(userMock);
