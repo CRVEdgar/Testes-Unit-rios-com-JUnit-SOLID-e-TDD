@@ -73,6 +73,7 @@ public class EmprestimoServiceTest {
 
         assertEquals(emprestimoRealizado.getLivros().size(), emprestimoMock.getLivros().size());
         assertEquals(emprestimoRealizado.getUser(), emprestimoMock.getUser());
+        System.out.println("TESTE 1 SUCCESS");
 
     }
 
@@ -92,6 +93,8 @@ public class EmprestimoServiceTest {
         Assertions.assertThatExceptionOfType(ServiceException.class)
                 .isThrownBy(() -> emprestimoService.registrarEmprestimo( emprestimoMock ))
                 .withMessage(LIVRO_RESERVADO);
+        System.out.println("TESTE 2 SUCCESS");
+
     }
 
     @Test
@@ -108,6 +111,7 @@ public class EmprestimoServiceTest {
 
         /**ASSERTIVAS*/
         assertEquals(emprestimoRealizado.getDataPrevista(), DEZ_OUT_08);
+        System.out.println("TESTE 3 SUCCESS");
 
     }
 
@@ -124,6 +128,7 @@ public class EmprestimoServiceTest {
 
         /**ASSERTIVAS*/
         assertTrue(podeAlugar);
+        System.out.println("TESTE 4 SUCCESS");
 
     }
 
@@ -150,6 +155,8 @@ public class EmprestimoServiceTest {
 
         assertEquals( emprestimoRealizado.getLivros().size(), emprestimoMock.getLivros().size() );
         assertEquals( emprestimoRealizado.getUser().getNumeroDeEmprestimos() , 1 );
+        System.out.println("TESTE 5 SUCCESS");
+
     }
 
     @Test
@@ -178,6 +185,7 @@ public class EmprestimoServiceTest {
 
         assertTrue( podeAlugar_Before );
         assertFalse( podeAlugar_After );
+        System.out.println("TESTE 6 SUCCESS");
 
     }
 
@@ -210,6 +218,7 @@ public class EmprestimoServiceTest {
         Assertions.assertThatExceptionOfType(ServiceException.class)
                 .isThrownBy(() -> emprestimoService.registrarEmprestimo( emprestimoMock ))
                 .withMessage(USER_LIMIT_EXCEEDED);
+        System.out.println("TESTE 7 SUCCESS");
 
     }
 
@@ -237,6 +246,7 @@ public class EmprestimoServiceTest {
 
         assertTrue( devolucao.getDataDevolucao()
                 .isBefore(emprestimoMock.getDataPrevista()) );
+        System.out.println("TESTE 8 SUCCESS");
 
     }
 
@@ -264,6 +274,7 @@ public class EmprestimoServiceTest {
 
         assertTrue( devolucao.getDataDevolucao()
                 .isEqual(emprestimoMock.getDataPrevista()) );
+        System.out.println("TESTE 9 SUCCESS");
 
     }
 
@@ -291,6 +302,7 @@ public class EmprestimoServiceTest {
 
         assertTrue( devolucao.getDataDevolucao()
                 .isAfter(emprestimoMock.getDataPrevista()) );
+        System.out.println("TESTE 10 SUCCESS");
 
     }
 
@@ -318,6 +330,7 @@ public class EmprestimoServiceTest {
 
         assertTrue( devolucao.getDataDevolucao()
                 .isAfter(emprestimoMock.getDataPrevista()) );
+        System.out.println("TESTE 11 SUCCESS");
 
     }
 
